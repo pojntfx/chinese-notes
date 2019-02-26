@@ -1,0 +1,110 @@
+# Hànyǔ xíncí 2019-01-06
+
+Xīn nián kuài lè tóngxué!
+
+| Déyǔ                                                            | Hànyǔ                          |
+| --------------------------------------------------------------- | ------------------------------ |
+| Farbe                                                           | yán sè                         |
+| Flasche                                                         | pīng zi                        |
+| Eine Flasche                                                    | yī pīng shuǐ                   |
+| Geld                                                            | qián                           |
+| 1000                                                            | qiān                           |
+| hell/flach                                                      | qiǎn                           |
+| dunkel/tief                                                     | shēn                           |
+| Bier                                                            | pí (jiǔ)                       |
+| Dunkles Bier                                                    | hēi pí (jiǔ)                   |
+| Tsingtao                                                        | qīng dǎo pí jiǔ                |
+| Obst                                                            | chuǐ guǒ                       |
+| Apfel                                                           | píng guǒ                       |
+| Uhr/Uhrzeit/Zeitpunkt                                           | diǎn                           |
+| Minute                                                          | fēn                            |
+| Stunde (EN: "o'clock"/"hour")                                   | shí                            |
+| halb (z.B. "halb vier") (EN: "half")                            | bàn                            |
+| Viertelstunde                                                   | kè/kè zhōng                    |
+| 7:30 ("halb sieben") (EN: "half past seven")                    | qī diǎn bàn                    |
+| 7:30 ("sieben Uhr dreißig") (EN: "seven thirty")                | qī diǎn sān shí                |
+| 7:30 ("sieben Uhr und dreißig Minuten") (EN: "seven thirty")    | qī diǎn sān shí fēn            |
+| jetzt                                                           | xiàn zài                       |
+| Strom                                                           | diàn                           |
+| Gehirn                                                          | nǎo                            |
+| Computer                                                        | diàn nǎo                       |
+| Gespräch                                                        | huà                            |
+| Telefon                                                         | diàn huà                       |
+| Bild                                                            | yǐng                           |
+| Film                                                            | diàn yǐng                      |
+| sprechen (EN: "to talk")                                        | shǒu                           |
+| Maschine                                                        | jī                             |
+| Smartphone                                                      | shǒujī                         |
+| Firma                                                           | gōngsī                         |
+| Apple Inc.                                                      | píng guǒ gōngsī                |
+| Apple Computer/Macintosh                                        | píng guǒ diàn nǎo              |
+| Apple Phone/iPhone                                              | píng guǒ shǒujī                |
+| aber (EN: "but")                                                | dànshì                         |
+| Mispel (Frucht)                                                 | pípá                           |
+| Eis                                                             | bīng                           |
+| Eiscreme                                                        | bīng qí lín                    |
+| klein                                                           | xiǎo                           |
+| Weizen                                                          | xiǎo mài                       |
+| Hefen                                                           | qū                             |
+| Probier mal!                                                    | shì yī xià!                    |
+| Bedeutung                                                       | yì si                          |
+| was (EN: "what")                                                | shénme                         |
+| Was bedeuted das?                                               | shénme yì si?                  |
+| Nicht der Rede wert!                                            | nǎlǐ, nǎlǐ!                    |
+| männlich/schwer (EN: "hard")                                    | nán                            |
+| leicht (EN: "easy")                                             | róng yì                        |
+| Welche Staatsangehörigkeit hast du? (Fokus Staatsangehörigkeit) | nǐ de guó jí shì shénme?       |
+| Welche Staatsangehörigkeit hast du? (Fokus Staatsbürger)        | nǐ shì nǎ guó rén?             |
+| Oben                                                            | shàng                          |
+| Unterricht                                                      | kè                             |
+| Unterrichtsbeginn                                               | shàng kè                       |
+| Arbeitsbeginn                                                   | shàng bān                      |
+| Unten                                                           | xià                            |
+| Unterrichtsende                                                 | xià kè                         |
+| Arbeitsende                                                     | xià bān                        |
+| Überstunden                                                     | jiā bān                        |
+| Müsli                                                           | yàn mài                        |
+| Maultaschen                                                     | déguó jiǎo zi                  |
+| Dampfnudel                                                      | bāo zi                         |
+| Morgen muss ich nicht zur Arbeit.                               | míng tiān wǒ bú yào shàng bān. |
+| diese/dieser (EN: "this")                                       | zhè (gè)                       |
+| diese (Plural) (EN: "these")                                    | zhè xiē                        |
+| einige/etwas (EN: "some")                                       | yī xiē                         |
+| jenes (EN: "that")                                              | nà (gè)                        |
+| jene (EN: "those")                                              | nà xiē                         |
+| schreiben                                                       | xiě                            |
+| lesen                                                           | dú                             |
+| Ich kann nicht Deutsch lesen.                                   | wǒ bú yào dú déyǔ.             |
+| machen (formell) (EN: "do")                                     | zuò                            |
+| machen (informell) (EN: "do")                                   | zhǔ                            |
+| Entschuldigung                                                  | duì bu qǐ                      |
+| Bitte (EN: "please")                                            | qǐng                           |
+| wieder (EN: "again")                                            | zài                            |
+| \${ZAHL} mal (EN: "\${NUMBER} times")                           | \${ZAHL} biàn                  |
+| oft mals (EN: "many times")                                     | hěn duō biàn                   |
+| wie viel (EN: "how many")                                       | jǐ                             |
+| Morgen                                                          | zào                            |
+| Vormittag                                                       | shàng wǔ                       |
+| Mittag                                                          | zhōng wǔ                       |
+| Nachmittag                                                      | xià wǔ                         |
+| Abend                                                           | wǎn shang                      |
+| Keine Ursache                                                   | bú kèqi                        |
+| Sache, Angelegenheit                                            | shì (qing)                     |
+| Café                                                            | kā fēi guǎn                    |
+| warten                                                          | děng                           |
+| mit/folgen                                                      | gēn                            |
+| verabreden/Verabredung                                          | yuē huì                        |
+| eilig/sich Sorgen machen                                        | zháojí                         |
+| noch                                                            | hái                            |
+| Jahr                                                            | nián                           |
+| Monat                                                           | yuè                            |
+| Woche                                                           | xīng qī                        |
+| Tag (Datum) (informell)/Nummer/Größe                            | hào                            |
+| Tag (Datum) (formell)                                           | rì                             |
+| Kalender                                                        | rìlì                           |
+| wissen (EN: "know")                                             | zhīdao                         |
+| sehen/lesen/anschauen/besuchen                                  | kàn                            |
+| zusammen                                                        | yìqǐ                           |
+| Partikel für Vermutung, Einverständnis                          | ba                             |
+
+(c) 2019 CC-BY-SA-4.0 Felicitas Pojtinger <felicitas@pojtinger.com> @pojntfx

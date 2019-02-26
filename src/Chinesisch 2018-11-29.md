@@ -1,0 +1,67 @@
+# Hànyǔ xíncí 2018-11-29
+
+| DE                              | ZH                           |
+| ------------------------------- | ---------------------------- |
+| aufwachen/entstehen             | shēng                        |
+| Tag                             | rì (yě tiān)                 |
+| Geburtstag                      | shēngrì                      |
+| glücklich                       | kuàilè                       |
+| glücklich                       | gāoxìng                      |
+| glücklich                       | kāixīn                       |
+| Alles Gute zum Geburtstag!      | shēngrì kuàilè!              |
+| Apfel                           | píngguǒ                      |
+| Zählwort für Äpfel              | gè                           |
+| Ein Apfel                       | yī gè píngguǒ                |
+| schnell                         | kuài                         |
+| sehr schnell                    | hěn kuài                     |
+| hoch/groß (Person/Gebäude)      | gāo                          |
+| Es geht so                      | yī bān bān                   |
+| Magst du einen Apfel?           | nǐ xǐ huān yī gè píngguǒ ma? |
+| vorgestern                      | qiántiān                     |
+| gestern                         | zuótiān                      |
+| heute                           | jīntiān                      |
+| morgen                          | míngttiān                    |
+| übermorgen                      | hòuttiān                     |
+| jeden Tag                       | měitiān                      |
+| hübsch (äußerlich)              | piàoliang                    |
+| hübsch (innerlich)              | měilì                        |
+| kennenlernen                    | rènshi                       |
+| wieder                          | zài                          |
+| unten                           | xià                          |
+| oben                            | shāng                        |
+| Nächstes Mal                    | xiàcì                        |
+| Letztes Mal                     | shāngcì                      |
+| Kühe                            | nín                          |
+| blasen/angeben                  | chūi                         |
+| Angeber                         | nín chūi                     |
+| Er gibt gerne an.               | tā hěn chūi nín.             |
+| immer                           | zǒngshì                      |
+| wo-Fragewort                    | nǎlǐ                         |
+| was-Fragewort                   | shénme                       |
+| ja/nein-Fragewort               | ma                           |
+| Ich auch.                       | wǒ yě shì.                   |
+| 1er                             | gè                           |
+| 10er                            | shí                          |
+| 100er                           | bǎi                          |
+| 1000er                          | qiān                         |
+| 10 000er                        | wàn                          |
+| 100 000 000er                   | yì                           |
+| 1 000 000 000er                 | shíyì                        |
+| schlagen                        | dǎ                           |
+| öffnen                          | kāi                          |
+| aufschlagen                     | dǎkāi                        |
+| Tür                             | mén                          |
+| Die Tür aufschlagen.            | dǎkāi mén.                   |
+| Bitte nicht \${AUFFORDERUNG}!   | qǐng yào \${AUFFORDERUNG}!   |
+| Bitte nicht das Fenster öffnen! | qǐng yào dǎkāi chuāng!       |
+| groß                            | dà                           |
+| Seite                           | yè                           |
+| Blätter (von Bäumen)            | yè zi                        |
+| Blatt Papier                    | yè zhǐ                       |
+| Ein Blatt Papier                | yī yè zhǐ                    |
+| Chinesische Sängerin            | Dèng Lìjūn                   |
+| Chinesischer Staatspräsident    | Xí Jìnpíng                   |
+| Chairman Mao                    | Máo Zédōng                   |
+| Was ist ihr Familienname?       | nín guì xìng?                |
+
+(c) CC-BY-SA-4.0 Felicitas Pojtinger <felicitas@pojtinger.com> @pojntfx

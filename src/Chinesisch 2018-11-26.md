@@ -1,0 +1,84 @@
+# Hànyǔ xíncí 2018-11-26
+
+| DE                                  | ZH                         |
+| ----------------------------------- | -------------------------- |
+| Hast du schon gegessen?             | nǐ chī fàn le ma?          |
+| Ich habe schon gegessen.            | chī le.                    |
+| Ich habe noch nicht gegessen.       | wǒ méi chī.                |
+| gekochter Reis                      | mǐ fàn                     |
+| vermissen                           | xiǎng                      |
+| Medikamente nehmen                  | chī yào                    |
+| Medikamente nehmen                  | fú yào                     |
+| Nicht wollen                        | bú yào                     |
+| Bitte (EN: "please")                | qǐng                       |
+| Kein Problem (EN: "you're welcome") | bù kèqi                    |
+| Danke (EN: "thanks")                | xiè xie                    |
+| Gäste/Gast                          | kèrén                      |
+| auch (EN: "also")                   | yě                         |
+| wirklich? (EN: "really?")           | zhēn de ma?                |
+| wirklich! (EN: "really!")           | zhēn de                    |
+| Ich komme auch aus Baiersbronn      | wǒ yě zhù zài Baiersbronn. |
+| mögen (EN: "like")                  | xǐ huān                    |
+| nicht mögen                         | bù xǐ huān                 |
+| Ich mag auch den Schwarzwald.       | wǒ yě xǐ huān hēi sān lín. |
+| Farbe                               | yán sè                     |
+| Schwarz                             | hēi sè                     |
+| Weiss                               | bái sè                     |
+| Orange                              | chéng sè                   |
+| Rot                                 | hóng sè                    |
+| Grün                                | lǜ sè                      |
+| Blau                                | lán sè                     |
+| Lila                                | zǐ sè                      |
+| Pink                                | fěn hóng sè                |
+| Rosa                                | méi gui sè                 |
+| Gelb                                | huáng sè                   |
+| Gold                                | jīn sè                     |
+| Braun                               | zōng sè                    |
+| Grau                                | huī sè                     |
+| dunkle \${FARBE}                    | shīn sè                    |
+| helle \${FARBE}                     | qiǎn sè                    |
+| Blauer Himmel                       | lán tiān                   |
+| Himmelblau                          | tiān lán sè                |
+| Einkaufstasche                      | lán zi                     |
+| Tee                                 | chà                        |
+| Grüner Tee                          | lǜ chà                     |
+| Schwarzer Tee                       | hóng sè                    |
+| Welche Farbe ist das?               | zhè shì shénme yán sè?     |
+| Und (EN: "and")                     | hé                         |
+| Lehrer/in                           | lǎoshī                     |
+| Ingenieur/in                        | gōngchéngshī               |
+| Sekretär/in                         | mìshū                      |
+| Entschuldigung, dass ich frage      | qǐng wèn                   |
+| Was                                 | shénme                     |
+| Vorstellen (EN: "introduce")        | jièshào                    |
+| mal kurz                            | yī xià                     |
+| Freund                              | péngyou                    |
+| sich freuen                         | gāoxìng                    |
+| Kennen lernen (EN: "get to know")   | rènshi                     |
+| Neue Vokabel                        | shēngcí                    |
+| Wort                                | dāncí                      |
+| Herr, Ehemann                       | xiān sheng                 |
+| Fragen                              | wèn                        |
+| Ich möchte dich fragen.             | wǒ xiǎng wèn nǐ.           |
+| Ich möchte dich küssen.             | wǒ xiǎng wén nǐ.           |
+| Wie heißt du?                       | nǐ jiào shénma?            |
+| alt (EN: "old")                     | lǎo                        |
+| Meister                             | shī                        |
+| Alter Meister                       | lǎo shī                    |
+| Lernen                              | xuè                        |
+| warten (EN: "wait")                 | děng                       |
+| Bitte warten Sie kurz.              | qǐng děng yī xià.          |
+| Weiblich                            | nǚ                         |
+| Frau                                | nǚ rén                     |
+| Freundin                            | nǚ péngyou                 |
+| Ich kenne dich.                     | wǒ rènshi nǐ.              |
+| Offen                               | kāi                        |
+| Herz                                | xīn                        |
+| Schnell                             | huài                       |
+| froh                                | lè                         |
+| Glücklich                           | huài lè                    |
+| Glücklich                           | kāi xīn                    |
+| Bist du glücklich?                  | nǐ kāi xīn ma?             |
+| Visitenkarte                        | míng piàn                  |
+
+(c) CC-BY-SA-4.0 Felicitas Pojtinger <felicitas@pojtinger.com> @pojntfx
