@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "semantic-ui-css/semantic.min.css";
-import { Container, Header, Card, Icon, Tab, Input } from "semantic-ui-react";
+import { Container, Card, Icon, Tab, Input } from "semantic-ui-react";
 import { Link, graphql } from "gatsby";
+import Header from "../components/Header";
 
 export default ({ data }) => {
   const tagsWithoutDuplicates = [];
@@ -14,58 +15,67 @@ export default ({ data }) => {
         !tagsWithoutDuplicates.includes(tag) && tagsWithoutDuplicates.push(tag)
     );
   });
-  const vocabWithDates = [];
-  for (let vocab of data.allVocabCsv.edges) {
-    if (!vocab.node.date) {
-      vocabWithDates[vocabWithDates.length - 1].push(vocab);
-    } else {
-      vocabWithDates.push([vocab]);
-    }
-  }
-  const [activeIndex, setActiveIndex] = useState(
-    window.localStorage.getItem("activeIndex") || 1
+  const vocabWithOneDate = [];
+  data.allVocabCsv.edges.forEach(vocab =>
+    !vocab.node.date
+      ? vocabWithOneDate[vocabWithOneDate.length - 1].push(vocab)
+      : vocabWithOneDate.push([vocab])
+  );
+  const vocabWithAllDates = vocabWithOneDate.map(vocabs =>
+    vocabs.map(vocab => {
+      const date = vocabs[0].node.date;
+      return {
+        node: { ...vocab.node, date }
+      };
+    })
   );
   const [tagSearchQuery, setTagSearchQuery] = useState(
-    window.localStorage.getItem("tagSearchQuery") || ""
+    (typeof window !== "undefined" &&
+      window.localStorage.getItem("tagSearchQuery")) ||
+      ""
   );
   const [dateSearchQuery, setDateSearchQuery] = useState(
-    window.localStorage.getItem("dateSearchQuery") || ""
+    (typeof window !== "undefined" &&
+      window.localStorage.getItem("dateSearchQuery")) ||
+      ""
   );
   return (
     <Container style={{ paddingTop: "1rem" }}>
-      <Header textAlign="left">
-        <Header.Content as="h1">Felicitas Pojtinger's Chinese Notes</Header.Content>
-        <Header.Subheader>
-          Notes from my Chinese learning journey (in German and Chinese).
-          Contribute on{" "}
-          <a href="https://gitlab.com/pojntfx/pojntfx/">
-            <Icon name="gitlab" fitted /> GitLab
-          </a>
-          !
-        </Header.Subheader>
-      </Header>
+      <Header
+        header="Felicitas Pojtinger's Chinese Notes"
+        subheader={
+          <>
+            Notes from my Chinese learning journey (in German and Chinese).
+            Contribute on{" "}
+            <a href="https://gitlab.com/pojntfx/pojntfx/">
+              <Icon name="gitlab" fitted /> GitLab
+            </a>
+            !
+          </>
+        }
+        noClose
+      />
       <Tab
-        activeIndex={activeIndex}
-        onTabChange={(_, data) => {
-          setActiveIndex(data.activeIndex);
-          window.localStorage.setItem("activeIndex", data.activeIndex);
-        }}
         panes={[
           {
-            menuItem: "By tag",
+            menuItem: "By tags",
             render: () => (
               <>
                 <Input
-                  placeholder="Search ..."
-                  icon="search"
+                  placeholder="Filter tags ..."
+                  icon="filter"
                   fluid
-                  autoFocus
                   style={{ marginBottom: "1em" }}
                   value={tagSearchQuery}
                   onChange={event => {
                     setTagSearchQuery(event.target.value);
-                    localStorage.setItem("tagSearchQuery", event.target.value);
+                    window &&
+                      window.localStorage.setItem(
+                        "tagSearchQuery",
+                        event.target.value
+                      );
                   }}
+                  autoFocus
                 />
                 <Card.Group>
                   {tagsWithoutDuplicates
@@ -73,7 +83,7 @@ export default ({ data }) => {
                     .map((tag, index) => (
                       <Card
                         header={tag}
-                        to={`tags/${tag}`}
+                        to={`/tags/${tag}`}
                         link
                         fluid
                         as={Link}
@@ -85,23 +95,27 @@ export default ({ data }) => {
             )
           },
           {
-            menuItem: "By date",
+            menuItem: "By dates",
             render: () => (
               <>
                 <Input
-                  placeholder="Search ..."
-                  icon="search"
+                  placeholder="Filter dates ..."
+                  icon="filter"
                   fluid
-                  autoFocus
                   style={{ marginBottom: "1em" }}
                   value={dateSearchQuery}
                   onChange={event => {
                     setDateSearchQuery(event.target.value);
-                    localStorage.setItem("dateSearchQuery", event.target.value);
+                    window &&
+                      window.localStorage.setItem(
+                        "dateSearchQuery",
+                        event.target.value
+                      );
                   }}
+                  autoFocus
                 />
                 <Card.Group>
-                  {vocabWithDates
+                  {vocabWithAllDates
                     .reverse()
                     .filter(vocabs =>
                       vocabs[0].node.date.includes(dateSearchQuery)
@@ -109,7 +123,7 @@ export default ({ data }) => {
                     .map((vocabs, index) => (
                       <Card
                         header={vocabs[0].node.date}
-                        to={`dates/${vocabs[0].node.date}`}
+                        to={`/dates/${vocabs[0].node.date}`}
                         link
                         fluid
                         as={Link}
@@ -131,7 +145,7 @@ export default ({ data }) => {
 };
 
 export const query = graphql`
-  query IndexVocabQuery {
+  query IndexQuery {
     allVocabCsv {
       edges {
         node {

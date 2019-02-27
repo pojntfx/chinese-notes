@@ -5,7 +5,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
 
 createTags = async (graphql, createPage) => {
   const { data } = await graphql(`
-    query AllVocabQuery {
+    query AllDatesQuery {
       allVocabCsv {
         edges {
           node {
@@ -18,29 +18,55 @@ createTags = async (graphql, createPage) => {
       }
     }
   `);
+  const vocabWithOneDate = [];
+  data.allVocabCsv.edges.forEach(vocab =>
+    !vocab.node.date
+      ? vocabWithOneDate[vocabWithOneDate.length - 1].push(vocab)
+      : vocabWithOneDate.push([vocab])
+  );
+  const vocabWithAllDates = vocabWithOneDate.map(vocabs =>
+    vocabs.map(vocab => {
+      const date = vocabs[0].node.date;
+      return {
+        node: { ...vocab.node, date }
+      };
+    })
+  );
   const tagsWithoutDuplicates = [];
-  data.allVocabCsv.edges.forEach(vocab => {
-    const tags = vocab.node.tags.includes(",")
-      ? vocab.node.tags.split(",")
-      : [vocab.node.tags];
-    tags.forEach(
-      tag =>
-        !tagsWithoutDuplicates.includes(tag) && tagsWithoutDuplicates.push(tag)
+  vocabWithAllDates.forEach(vocabs =>
+    vocabs.forEach(vocab => {
+      const tags = vocab.node.tags.includes(",")
+        ? vocab.node.tags.split(",")
+        : [vocab.node.tags];
+      tags.forEach(
+        tag =>
+          !tagsWithoutDuplicates.includes(tag) &&
+          tagsWithoutDuplicates.push(tag)
+      );
+    })
+  );
+  const vocabWithAllTags = [];
+  tagsWithoutDuplicates.forEach(tag => {
+    const vocabWithTag = [];
+    vocabWithAllDates.forEach(vocabs =>
+      vocabs.forEach(
+        vocab =>
+          vocab.node.tags.includes(tag) && vocabWithTag.push({ ...vocab, tag })
+      )
     );
+    vocabWithAllTags.push(vocabWithTag);
   });
-  const tagsWithVocab = tagsWithoutDuplicates.map(tag => ({
-    tag,
-    vocabs: data.allVocabCsv.edges.filter(vocab =>
-      vocab.node.tags.includes(tag)
-    )
-  }));
-  for (let tag of tagsWithVocab) {
-    await createPage({
-      path: `/tags/${tag.tag}`,
-      component: `${__dirname}/src/layouts/Vocab.js`,
-      context: tag
-    });
-  }
+  vocabWithAllTags.forEach(
+    async vocabs =>
+      await createPage({
+        path: `/tags/${vocabs[0].tag}`,
+        component: `${__dirname}/src/layouts/Vocab.js`,
+        context: {
+          tag: vocabs[0].tag,
+          vocabs
+        }
+      })
+  );
 };
 
 createDates = async (graphql, createPage) => {
@@ -58,22 +84,29 @@ createDates = async (graphql, createPage) => {
       }
     }
   `);
-  const vocabWithDates = [];
-  for (let vocab of data.allVocabCsv.edges) {
-    if (!vocab.node.date) {
-      vocabWithDates[vocabWithDates.length - 1].push(vocab);
-    } else {
-      vocabWithDates.push([vocab]);
-    }
-  }
-  for (let vocabs of vocabWithDates) {
-    await createPage({
-      path: `/dates/${vocabs[0].node.date}`,
-      component: `${__dirname}/src/layouts/Vocab.js`,
-      context: {
-        date: vocabs[0].node.date,
-        vocabs
-      }
-    });
-  }
+  const vocabWithOneDate = [];
+  data.allVocabCsv.edges.forEach(vocab =>
+    !vocab.node.date
+      ? vocabWithOneDate[vocabWithOneDate.length - 1].push(vocab)
+      : vocabWithOneDate.push([vocab])
+  );
+  const vocabWithAllDates = vocabWithOneDate.map(vocabs =>
+    vocabs.map(vocab => {
+      const date = vocabs[0].node.date;
+      return {
+        node: { ...vocab.node, date }
+      };
+    })
+  );
+  vocabWithAllDates.forEach(
+    async vocabs =>
+      await createPage({
+        path: `/dates/${vocabs[0].node.date}`,
+        component: `${__dirname}/src/layouts/Vocab.js`,
+        context: {
+          date: vocabs[0].node.date,
+          vocabs
+        }
+      })
+  );
 };
