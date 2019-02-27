@@ -3,14 +3,14 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "pages",
-        path: "src/pages/vocab"
+        name: "data",
+        path: "src/data"
       }
     },
     {
-      resolve: "gatsby-mdx",
+      resolve: "gatsby-transformer-csv",
       options: {
-        extensions: [".md"]
+        delimiter: ";"
       }
     }
   ]
