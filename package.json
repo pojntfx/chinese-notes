@@ -1,0 +1,25 @@
+{
+  "name": "@pojntfx/chinese-notes",
+  "version": "0.0.1-alpha1",
+  "description": "Notes from my Chinese learning journey (in German and Chinese)",
+  "main": "src/pages/index.js",
+  "scripts": {
+    "dev": "gatsby develop",
+    "build": "gatsby build",
+    "start": "gatsby serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Felicitas Pojtinger <felicitas@pojtinger.com>",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "@mdx-js/mdx": "^0.18.1",
+    "@mdx-js/tag": "^0.18.0",
+    "gatsby": "^2.1.18",
+    "gatsby-mdx": "^0.4.0",
+    "gatsby-source-filesystem": "^2.0.23",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.85.0"
+  }
+}
