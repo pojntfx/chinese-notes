@@ -15,7 +15,14 @@ export default data => (
       <Header
         content={
           <span>
-            Vocab with the tag <i>"{data.pageContext.tag}"</i>
+            Vocab{" "}
+            {data.pageContext.tag ? (
+              <>
+                tagged <i>"{data.pageContext.tag}"</i>
+              </>
+            ) : (
+              `from ${data.pageContext.date}`
+            )}
           </span>
         }
         subheader="Felicitas Pojtinger's Chinese Notes"
@@ -30,6 +37,7 @@ export default data => (
         content="Close"
         icon="close"
         negative
+        basic
         to="/"
         as={Link}
         floated="right"
@@ -43,22 +51,37 @@ export default data => (
         <Table.Row>
           <Table.HeaderCell>Deutsch</Table.HeaderCell>
           <Table.HeaderCell>中文</Table.HeaderCell>
-          <Table.HeaderCell>Other Tags</Table.HeaderCell>
+          <Table.HeaderCell>
+            {data.pageContext.tag ? "Other Tags" : "Tags"}
+          </Table.HeaderCell>
         </Table.Row>
       </Table.Header>
       <Table.Body>
-        {data.pageContext.vocabs.map(vocab => (
-          <Table.Row>
+        {data.pageContext.vocabs.map((vocab, index) => (
+          <Table.Row key={index}>
             <Table.Cell>{vocab.node.de}</Table.Cell>
             <Table.Cell>{vocab.node.zh}</Table.Cell>
             <Table.Cell>
               {vocab.node.tags
                 .split(",")
-                .map(
-                  tag =>
+                .map((tag, index) =>
+                  data.pageContext.tag ? (
                     tag !== data.pageContext.tag && (
-                      <Label to={`/tags/${tag}`} as={Link} content={tag} />
+                      <Label
+                        to={`/tags/${tag}`}
+                        as={Link}
+                        content={tag}
+                        key={index}
+                      />
                     )
+                  ) : (
+                    <Label
+                      to={`/tags/${tag}`}
+                      as={Link}
+                      content={tag}
+                      key={index}
+                    />
+                  )
                 )}
             </Table.Cell>
           </Table.Row>
@@ -67,5 +90,3 @@ export default data => (
     </Table>
   </Container>
 );
-
-// JSON.stringify(data.pageContext.vocabs);

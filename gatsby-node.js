@@ -1,8 +1,9 @@
 exports.createPages = async ({ graphql, actions: { createPage } }) => {
-  createVocabs(graphql, createPage);
+  createTags(graphql, createPage);
+  createDates(graphql, createPage);
 };
 
-createVocabs = async (graphql, createPage) => {
+createTags = async (graphql, createPage) => {
   const { data } = await graphql(`
     query AllVocabQuery {
       allVocabCsv {
@@ -36,8 +37,43 @@ createVocabs = async (graphql, createPage) => {
   for (let tag of tagsWithVocab) {
     await createPage({
       path: `/tags/${tag.tag}`,
-      component: `${__dirname}/src/layouts/Tag.js`,
+      component: `${__dirname}/src/layouts/Vocab.js`,
       context: tag
+    });
+  }
+};
+
+createDates = async (graphql, createPage) => {
+  const { data } = await graphql(`
+    query AllDatesQuery {
+      allVocabCsv {
+        edges {
+          node {
+            de
+            zh
+            tags
+            date
+          }
+        }
+      }
+    }
+  `);
+  const vocabWithDates = [];
+  for (let vocab of data.allVocabCsv.edges) {
+    if (!vocab.node.date) {
+      vocabWithDates[vocabWithDates.length - 1].push(vocab);
+    } else {
+      vocabWithDates.push([vocab]);
+    }
+  }
+  for (let vocabs of vocabWithDates) {
+    await createPage({
+      path: `/dates/${vocabs[0].node.date}`,
+      component: `${__dirname}/src/layouts/Vocab.js`,
+      context: {
+        date: vocabs[0].node.date,
+        vocabs
+      }
     });
   }
 };
