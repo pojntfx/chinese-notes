@@ -1,8 +1,9 @@
 import React from "react";
-import { Header, Button } from "semantic-ui-react";
+import { Header, Button, Flag, Icon } from "semantic-ui-react";
 import { Link } from "gatsby";
+import Helmet from "react-helmet";
 
-export default ({ header, subheader, searchActive, noClose }) => (
+export default ({ header, subheader, searchActive, noClose, title }) => (
   <div
     style={{
       display: "flex",
@@ -11,6 +12,9 @@ export default ({ header, subheader, searchActive, noClose }) => (
       overflowX: "auto"
     }}
   >
+    <Helmet>
+      <title>{`${title} | Felicitas Pojtinger's Chinese Notes`}</title>
+    </Helmet>
     <Header
       textAlign="left"
       floated="left"
@@ -19,7 +23,13 @@ export default ({ header, subheader, searchActive, noClose }) => (
       }}
     >
       <Header.Content as="h1">{header}</Header.Content>
-      <Header.Subheader>{subheader}</Header.Subheader>
+      <Header.Subheader>
+        <Flag name="cn" /> {subheader} Contribute on{" "}
+        <a href="https://gitlab.com/pojntfx/pojntfx/">
+          <Icon name="gitlab" fitted /> GitLab
+        </a>
+        !
+      </Header.Subheader>
     </Header>
     <div>
       {!noClose && (

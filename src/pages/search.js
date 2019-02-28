@@ -48,8 +48,9 @@ export default ({ data }) => {
   return (
     <Container style={{ paddingTop: "1rem" }}>
       <Header
+        title="Global Search"
         header="Global Search"
-        subheader="Felicitas Pojtinger's Chinese Notes"
+        subheader="Felicitas Pojtinger's Chinese Notes."
         searchActive={true}
       />
       <Input

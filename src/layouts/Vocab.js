@@ -6,6 +6,11 @@ import Table from "../components/Table";
 export default data => (
   <Container style={{ paddingTop: "1rem" }}>
     <Header
+      title={`Vocab ${
+        data.pageContext.tag
+          ? `tagged "${data.pageContext.tag}"`
+          : `from ${data.pageContext.date}`
+      }`}
       header={
         <span>
           Vocab{" "}
@@ -18,7 +23,7 @@ export default data => (
           )}
         </span>
       }
-      subheader="Felicitas Pojtinger's Chinese Notes"
+      subheader="Felicitas Pojtinger's Chinese Notes."
       searchActive={false}
     />
     <Table

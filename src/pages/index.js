@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "semantic-ui-css/semantic.min.css";
-import { Container, Card, Icon, Tab, Input } from "semantic-ui-react";
+import { Container, Card, Tab, Input } from "semantic-ui-react";
 import { Link, graphql } from "gatsby";
 import Header from "../components/Header";
 
@@ -42,17 +42,9 @@ export default ({ data }) => {
   return (
     <Container style={{ paddingTop: "1rem" }}>
       <Header
+        title="Home"
         header="Felicitas Pojtinger's Chinese Notes"
-        subheader={
-          <>
-            Notes from my Chinese learning journey (in German and Chinese).
-            Contribute on{" "}
-            <a href="https://gitlab.com/pojntfx/pojntfx/">
-              <Icon name="gitlab" fitted /> GitLab
-            </a>
-            !
-          </>
-        }
+        subheader="Notes from my Chinese learning journey (in German and Chinese)."
         noClose
       />
       <Tab
