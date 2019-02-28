@@ -12,7 +12,9 @@ export default ({ data }) => {
       : [vocab.node.tags];
     tags.forEach(
       tag =>
-        !tagsWithoutDuplicates.includes(tag) && tagsWithoutDuplicates.push(tag)
+        tag &&
+        !tagsWithoutDuplicates.includes(tag) &&
+        tagsWithoutDuplicates.push(tag)
     );
   });
   const vocabWithOneDate = [];
@@ -50,43 +52,6 @@ export default ({ data }) => {
       <Tab
         panes={[
           {
-            menuItem: "By tags",
-            render: () => (
-              <>
-                <Input
-                  placeholder="Filter tags ..."
-                  icon="filter"
-                  fluid
-                  style={{ marginBottom: "1em" }}
-                  value={tagSearchQuery}
-                  onChange={event => {
-                    setTagSearchQuery(event.target.value);
-                    window &&
-                      window.localStorage.setItem(
-                        "tagSearchQuery",
-                        event.target.value
-                      );
-                  }}
-                  autoFocus
-                />
-                <Card.Group>
-                  {tagsWithoutDuplicates
-                    .filter(tag => tag.includes(tagSearchQuery))
-                    .map((tag, index) => (
-                      <Card
-                        header={tag}
-                        to={`/tags/${tag}`}
-                        link
-                        fluid
-                        as={Link}
-                        key={index}
-                      />
-                    ))}
-                </Card.Group>
-              </>
-            )
-          },
-          {
             menuItem: "By dates",
             render: () => (
               <>
@@ -114,8 +79,47 @@ export default ({ data }) => {
                     )
                     .map((vocabs, index) => (
                       <Card
-                        header={vocabs[0].node.date}
+                        header={new Date(
+                          vocabs[0].node.date
+                        ).toLocaleDateString()}
                         to={`/dates/${vocabs[0].node.date}`}
+                        link
+                        fluid
+                        as={Link}
+                        key={index}
+                      />
+                    ))}
+                </Card.Group>
+              </>
+            )
+          },
+          {
+            menuItem: "By tags",
+            render: () => (
+              <>
+                <Input
+                  placeholder="Filter tags ..."
+                  icon="filter"
+                  fluid
+                  style={{ marginBottom: "1em" }}
+                  value={tagSearchQuery}
+                  onChange={event => {
+                    setTagSearchQuery(event.target.value);
+                    window &&
+                      window.localStorage.setItem(
+                        "tagSearchQuery",
+                        event.target.value
+                      );
+                  }}
+                  autoFocus
+                />
+                <Card.Group>
+                  {tagsWithoutDuplicates
+                    .filter(tag => tag.includes(tagSearchQuery))
+                    .map((tag, index) => (
+                      <Card
+                        header={tag}
+                        to={`/tags/${tag}`}
                         link
                         fluid
                         as={Link}

@@ -40,6 +40,7 @@ createTags = async (graphql, createPage) => {
         : [vocab.node.tags];
       tags.forEach(
         tag =>
+          tag &&
           !tagsWithoutDuplicates.includes(tag) &&
           tagsWithoutDuplicates.push(tag)
       );

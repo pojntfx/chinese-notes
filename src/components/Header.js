@@ -4,34 +4,48 @@ import { Link } from "gatsby";
 import Helmet from "react-helmet";
 
 export default ({ header, subheader, searchActive, noClose, title }) => (
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      overflowX: "auto"
-    }}
-  >
-    <Helmet>
-      <title>{`${title} | Felicitas Pojtinger's Chinese Notes`}</title>
-    </Helmet>
-    <Header
-      textAlign="left"
-      floated="left"
+  <>
+    <div style={{ paddingTop: "1em", paddingBottom: "2em", overflowX: "auto" }}>
+      <Helmet>
+        <title>{`${title} | Felicitas Pojtinger's Chinese Notes`}</title>
+      </Helmet>
+      <Header
+        textAlign="center"
+        style={{
+          whiteSpace: "nowrap"
+        }}
+      >
+        <Header.Content as="h1">{header}</Header.Content>
+        <Header.Subheader>
+          <Flag name="cn" /> {subheader} Contribute on{" "}
+          <a href="https://gitlab.com/pojntfx/pojntfx/">
+            <Icon name="gitlab" fitted /> GitLab
+          </a>
+          !
+        </Header.Subheader>
+      </Header>
+    </div>
+    <div
       style={{
-        whiteSpace: "nowrap"
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        overflowX: "auto",
+        paddingBottom: "1em"
       }}
     >
-      <Header.Content as="h1">{header}</Header.Content>
-      <Header.Subheader>
-        <Flag name="cn" /> {subheader} Contribute on{" "}
-        <a href="https://gitlab.com/pojntfx/pojntfx/">
-          <Icon name="gitlab" fitted /> GitLab
-        </a>
-        !
-      </Header.Subheader>
-    </Header>
-    <div>
+      <Button
+        content="Search"
+        icon="search"
+        basic
+        to="/search"
+        as={Link}
+        floated="right"
+        style={{
+          whiteSpace: "nowrap"
+        }}
+        active={searchActive}
+      />
       {!noClose && (
         <Button
           content="Close"
@@ -46,18 +60,6 @@ export default ({ header, subheader, searchActive, noClose, title }) => (
           }}
         />
       )}
-      <Button
-        content="Search"
-        icon="search"
-        basic
-        to="/search"
-        as={Link}
-        floated="right"
-        style={{
-          whiteSpace: "nowrap"
-        }}
-        active={searchActive}
-      />
     </div>
-  </div>
+  </>
 );

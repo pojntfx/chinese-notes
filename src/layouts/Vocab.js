@@ -4,7 +4,7 @@ import Header from "../components/Header";
 import Table from "../components/Table";
 
 export default data => (
-  <Container style={{ paddingTop: "1rem" }}>
+  <Container style={{ paddingTop: "1rem", paddingBottom: "1rem" }}>
     <Header
       title={`Vocab ${
         data.pageContext.tag

@@ -46,7 +46,7 @@ export default ({ data }) => {
     )
   );
   return (
-    <Container style={{ paddingTop: "1rem" }}>
+    <Container style={{ paddingTop: "1rem", paddingBottom: "1rem" }}>
       <Header
         title="Global Search"
         header="Global Search"
