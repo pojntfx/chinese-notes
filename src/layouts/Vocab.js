@@ -19,7 +19,7 @@ export default data => (
               tagged <i>"{data.pageContext.tag}"</i>
             </>
           ) : (
-            `from ${data.pageContext.date}`
+            `from ${new Date(data.pageContext.date).toLocaleDateString()}`
           )}
         </span>
       }

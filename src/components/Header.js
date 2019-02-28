@@ -5,7 +5,7 @@ import Helmet from "react-helmet";
 
 export default ({ header, subheader, searchActive, noClose, title }) => (
   <>
-    <div style={{ paddingTop: "1em", paddingBottom: "2em", overflowX: "auto" }}>
+    <div style={{ paddingTop: "1em", paddingBottom: "1em", overflowX: "auto" }}>
       <Helmet>
         <title>{`${title} | Felicitas Pojtinger's Chinese Notes`}</title>
       </Helmet>
@@ -27,6 +27,7 @@ export default ({ header, subheader, searchActive, noClose, title }) => (
     </div>
     <div
       style={{
+        paddingTop: "1em",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
