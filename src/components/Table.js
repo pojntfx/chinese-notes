@@ -26,11 +26,20 @@ export default ({ metaMetaVocab, noDate, otherTags, primaryTag }) => (
               </Table.Cell>
             )}
             <Table.Cell>
-              {vocab.node.tags
-                .split(",")
-                .map((tag, index) =>
-                  otherTags ? (
-                    tag !== primaryTag && (
+              {vocab.node.tags.split(",")[0] &&
+                vocab.node.tags
+                  .split(",")
+                  .map((tag, index) =>
+                    otherTags ? (
+                      tag !== primaryTag && (
+                        <Label
+                          to={`/tags/${tag}`}
+                          as={Link}
+                          content={tag}
+                          key={index}
+                        />
+                      )
+                    ) : (
                       <Label
                         to={`/tags/${tag}`}
                         as={Link}
@@ -38,15 +47,7 @@ export default ({ metaMetaVocab, noDate, otherTags, primaryTag }) => (
                         key={index}
                       />
                     )
-                  ) : (
-                    <Label
-                      to={`/tags/${tag}`}
-                      as={Link}
-                      content={tag}
-                      key={index}
-                    />
-                  )
-                )}
+                  )}
             </Table.Cell>
           </Table.Row>
         ))
