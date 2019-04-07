@@ -38,7 +38,6 @@ export default ({ header, subheader, searchActive, noClose, title }) => (
       <Button
         content="Search"
         icon="search"
-        basic
         to="/search"
         as={Link}
         floated="right"
@@ -52,7 +51,6 @@ export default ({ header, subheader, searchActive, noClose, title }) => (
           content="Close"
           icon="close"
           negative
-          basic
           to="/"
           as={Link}
           floated="right"

@@ -1,0 +1,12 @@
+body {
+  background-image: url(https://source.unsplash.com/random?tropical) !important;
+  background-position: center center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  backdrop-filter: blur(5px) !important;
+}
+
+body > * {
+  background: linear-gradient(0deg, transparent 33%, rgba(255, 255, 255, 0.9));
+}

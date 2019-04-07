@@ -2,9 +2,15 @@ import React from "react";
 import { Container } from "semantic-ui-react";
 import Header from "../components/Header";
 import Table from "../components/Table";
+import "../styles/main.css";
 
 export default data => (
-  <Container style={{ paddingTop: "1rem", paddingBottom: "1rem" }}>
+  <Container
+    style={{
+      paddingTop: "1rem",
+      paddingBottom: "1rem"
+    }}
+  >
     <Header
       title={`Vocab ${
         data.pageContext.tag
