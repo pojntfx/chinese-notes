@@ -6,8 +6,16 @@
   "scripts": {
     "dev": "gatsby develop",
     "build": "gatsby build",
-    "start": "gatsby serve",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "chinese-notes": "src/cmd/chinese-notes"
+  },
+  "pkg": {
+    "scripts": "src/cmd/chinese-notes",
+    "assets": [
+      "public/**/*"
+    ]
   },
   "author": "Felicitas Pojtinger <felicitas@pojtinger.com>",
   "license": "AGPL-3.0",
@@ -23,5 +31,8 @@
     "react-helmet": "^5.2.1",
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.88.1"
+  },
+  "devDependencies": {
+    "pkg": "^4.4.0"
   }
 }

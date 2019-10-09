@@ -1,0 +1,18 @@
+# Setup env
+FROM node:10-buster-slim
+RUN mkdir -p /app
+WORKDIR /app
+
+# Setup app
+COPY package.json .
+COPY package-lock.json .
+RUN npm install
+
+# Add app
+COPY gatsby-browser.js .
+COPY gatsby-config.js .
+COPY gatsby-node.js .
+COPY src src
+
+# Run app
+CMD npm run dev

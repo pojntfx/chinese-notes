@@ -1,0 +1,5 @@
+image: registry.gitlab.com/pojntfx/pojntfx/chinese-notes:latest
+memory: "128Mi"
+cpu: "500m"
+domain: chinese-notes.felicitas.pojtinger.space
+dev: false
